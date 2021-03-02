@@ -1,0 +1,6 @@
+__pychache__
+venv
+db.sqlite3
+.vs_code
+.vscode/settings.json
+staticfiles
