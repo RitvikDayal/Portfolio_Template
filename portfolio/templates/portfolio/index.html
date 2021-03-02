@@ -1,0 +1,198 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+	
+		<div id="fh5co-main">
+		{% if messages %}
+			{% for message in messages %}
+				<div class="alert alert-{{ message.tags }}">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endif %}
+			<aside id="fh5co-hero" class="js-fullheight">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url({% static 'portfolio/images/home_bg_1.jpg' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>Hello, My name is <strong>Your Name</strong></h1>
+										   <h2>I am a Web Developer and Data Science Enthusiast</h2>
+											<p><a class="btn btn-primary" href="{% url 'resume_view' %}" target="_blank"> <i class="icon-monitor"></i>View Resume</a> <a class="btn btn-primary btn-learn">About Me<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url({% static 'portfolio/images/home_bg_2.jpg' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>I am in love with programming since I was 15.</h1>
+											<h2>Coding is like developing imaginations for me</a></h2>
+											<p><a class="btn btn-primary" href="https://github.com/RitvikDayal"> <i class="icon-monitor"></i> Github</a> <a class="btn btn-primary btn-learn" href="https://www.linkedin.com/in/ritvik-dayal-374449163/">Linkedin<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</aside>
+
+			<div class="fh5co-narrow-content">
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-5 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="{% static 'portfolio/images/photograph.JPG' %}" alt="your name">
+					</div>
+					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+						<h2 class="fh5co-heading" style="margin-top: 20px;">About Me</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+						<br />
+						<a class="btn btn-primary" href="https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=ritvik-dayal-374449163&trk=public_profile_top-card-primary-button-join-to-connect" target="_blank">Connect on Linkedin ></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Skills</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="fab fa-python"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3>Programming Skills</h3>
+								<p>I prefer <strong>Python</strong> but can also use languages like <strong>JavaScript, Java, C</strong>. Language is never a barier for me to solve problems.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="fas fa-code"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3>Web Development</h3>
+								<p>I can develop websites using <strong>Django, ReactJs, Javascript</strong>. <strong>Wordpress</strong> is another tool in my box for the purpose. I am always thriving to be a full stack developer.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="fas fa-brain"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3>Data Science</h3>
+								<p>I am an enthusiast that have practical knowledge of <strong>Data Analytics, Machine Learning and Deep Learning</strong>. I find data science as exciting as mystery solving.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="fas fa-male"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3>Interpersonal</h3>
+								<p>I am a self-taught technophile who is an enterpriser by nature. I have always been a team player who likes to support peers and teammates. I believe in learning over forfeiting for a difficult task.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Projects</h2>
+				<div class="row row-bottom-padded-md">
+
+				{% for repo in git_repos %}
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="{% static repo.image_file.0 %}" class="img-responsive" alt="{{ repo.name }}"></a>
+							<div class="desc">
+								<h3><a href="{{repo.url}}">{{ repo.name }}</a></h3>
+								<span><small>Created: </small> / <small> {{repo.created}} </small> / <small> <i class="icon-star"></i> {{repo.stars}}</small></span>
+								<p>{{repo.description}}</p>
+								<a href="{{repo.url}}" class="lead">GITHUB <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+
+				{% if forloop.counter|divisibleby:4 %}
+				</div>
+				<div class="row row-bottom-padded-md">
+				{% endif %}
+				{% endfor %}
+				</div>
+			</div>
+
+			<div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+				<div class="row">
+					<div class="col-md-4">
+						<h2>Get In Touch</h2>
+					</div>
+				</div>
+
+				<form method="POST" action="">
+				{% csrf_token %}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+									{{ form.full_name }}
+									<p  style="font-size: 12px;color: #f54242!important;">
+									{{ form.full_name.errors }}
+									</p>
+									</div>
+									<div class="form-group">
+									{{ form.email }}
+									<p  style="font-size: 12px;color: #f54242!important;">
+									{{ form.email.errors }}
+									</p>
+									</div>
+									<div class="form-group">
+									{{ form.phone_number }}
+									<p  style="font-size: 12px;color: #f54242!important;">
+									{{ form.phone_number.errors }}
+									</p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+									{{ form.message }}
+									<p  style="font-size: 12px;color: #f54242!important;">
+									{{ form.message.errors }}
+									</p>
+									</div>
+									<div class="form-group">
+									{{ form.captcha }}
+									<p  style="font-size: 12px;color: #f54242!important;">
+									{{ form.captcha.errors }}
+									</p>
+									</div>
+									<div class="form-group">
+										<input type="submit" class="btn btn-primary btn-md" value="Send Message">
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

@@ -1,0 +1,37 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+		<div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Projects</h2>
+				<!-- Start: 1 Row 3 Columns -->
+				<div>
+					<div class="container">
+						<div class="row" style="margin: 50px 0px">
+						{% for project in projects %}
+							<div class="col-md-4" style="margin-top: 20px;">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="card-title">{{project.name}}</h4>
+										<h6 class="text-muted card-subtitle mb-2">Created: {{project.created}}</h6>
+										<p class="card-text">{{project.description}}</p>
+										<h6 class="text-muted card-subtitle mb-2"><i class="fa fa-star"></i>: {{project.stars}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<i class="fa fa-eye"></i>: {{projects.created}}</h6><a class="btn btn-primary" type="button" target="_blank" href="{{project.url}}"><i class="icon-github"></i>&nbsp; GITHUB</a>
+									</div>
+								</div>
+							</div>
+							{% if forloop.counter|divisibleby:3 %}
+						</div>
+						<div class="row" style="margin: 50px 0px;">
+						{% endif %}
+
+						{% endfor %}
+						</div>
+					</div>
+				</div><!-- End: Row Columns -->
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+

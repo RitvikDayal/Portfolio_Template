@@ -1,0 +1,10 @@
+Contact Form
+----------------------------------------------------------------
+
+Name: {{full_name|safe}}
+
+Phone: {{phone_number|safe}}
+Email: {{email|safe}}
+
+Messsage: 
+{{message|safe}}
